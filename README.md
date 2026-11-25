@@ -40,16 +40,16 @@ export FLOOD_DATA_DIR=/path/to/data    # default: ./data   (Windows: set FLOOD_D
 export EE_PROJECT=<your Earth Engine project>   # only for exploratory/02_extract_rainfall_hanze.py
 ```
 
-Hardware and software used for the reported runs: [TODO: CPU, RAM, OS, Python and package versions from `check_environment.py`].
+Hardware and software used for the reported runs: [The computational experiments were conducted on a Windows 11 Pro (version 26H2) system equipped with an Intel Core i5-8365U processor (1.60 GHz) and 16 GB RAM (15.81 GB detected). The software environment used Python 3.13.7.
+The principal Python packages and versions included NumPy 2.5.3, Pandas 3.0.5, Scikit-learn 1.9.0, Matplotlib 3.11.2, Xarray 2026.9.0, netCDF4 1.7.5.1.post1, openpyxl 3.1.5, and the Google Earth Engine Python API 1.7.53.].
 
 ## Data to download (not included)
 
-1. **Caravan** (netCDF release; record the version from the `VERSION` file in the archive: [TODO]; DOI: [TODO from the Caravan record]).
-   Save the archive as `$FLOOD_DATA_DIR/raw/Caravan/Caravan-nc-download.tar.gz`. We use the LamaH (Central Europe) and CAMELS-GB sources.
-2. **HANZE v3.0.2 beta** (https://zenodo.org/records/23670886): `HANZE_events_v3_0_2b.csv` and `Regions_v2024_simplified.zip`
-   into `$FLOOD_DATA_DIR/raw/HANZE/`. Newer versions may change event records, so keep the version you use.
+1. **Caravan** (netCDF release).
+   We use the LamaH (Central Europe) and CAMELS-GB sources.
+2. **HANZE v3.0.2 beta** (https://zenodo.org/records/23670886)
 
-## Reproduction (observed run times are from the reported runs; hardware: [TODO])
+## Reproduction (observed run times are from the reported runs)
 
 ```
 python src/03_caravan_manifest.py                       # one pass over the 25 GB archive, writes a manifest
@@ -73,8 +73,6 @@ python src/10_hanze_flood_days.py --tag final2           # flood-day tests (need
 python src/11_make_figures.py                           # Fig1-Fig7 and FigS1 (PDF, EPS, PNG) in ../figures
 ```
 
-Copying `results/*.csv` into `$FLOOD_DATA_DIR/processed/` lets `11_make_figures.py` regenerate all figures without re-running the experiments.
-
 ## Reproducibility notes
 
 - Seeds: basin sampling uses seed 42 (`06`); masks, subsampling and the held-out basins use the `--seeds` value.
@@ -86,4 +84,4 @@ Copying `results/*.csv` into `$FLOOD_DATA_DIR/processed/` lets `11_make_figures.
 
 ## Citation
 
-See `CITATION.cff`. Please also cite the source datasets listed in `DATA_LICENCES.md`.
+See `CITATION.cff`.
