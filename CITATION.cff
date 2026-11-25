@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "Code and results for missingness-aware conformal prediction for streamflow early warning"
+authors:
+  - family-names: "Dar"
+    given-names: "Madiha"
+    orcid: "https://orcid.org/0009-0003-4861-1281"
+version: "1.0.0"
+date-released: "2026-11-26"
+license: MIT
+repository-code: "[TODO: GitHub URL]"

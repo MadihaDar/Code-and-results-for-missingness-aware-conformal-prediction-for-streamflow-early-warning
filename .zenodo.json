@@ -1,0 +1,8 @@
+{
+  "title": "Code and results for missingness-aware conformal prediction for streamflow early warning",
+  "upload_type": "software",
+  "description": "The code rebuilds all analyses from the public Caravan (LamaH-CE and CAMELS-GB sources) and HANZE datasets; source data are not redistributed.",
+  "creators": [{"name": "Dar, Madiha", "orcid": "0009-0003-4861-1281"}],
+  "license": "mit",
+  "keywords": ["conformal prediction", "missing data", "streamflow forecasting", "flood early warning", "uncertainty quantification"]
+}

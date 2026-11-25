@@ -1,0 +1,9 @@
+# minimum versions; record exact versions with `pip freeze > requirements-freeze.txt` and deposit that file too
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.3        # HistGradientBoostingRegressor with quantile loss
+matplotlib>=3.7
+xarray>=2024.1
+netCDF4>=1.6
+openpyxl>=3.1            # only for the optional Pakistan table in 01_prepare_tables.py
+earthengine-api>=0.1.390 # only for exploratory/02_extract_rainfall_hanze.py
